@@ -34,7 +34,7 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 ENV LANG en_US.UTF-8
 
 COPY --from=builder /usr/src/grin/target/release/grin /usr/local/bin/grin
-COPY --from=builder /usr/src/grin/grin.toml /usr/src/grin/grin.toml
+#COPY --from=builder /usr/src/grin/grin.toml /usr/src/grin/grin.toml
 
 WORKDIR /usr/src/grin
 
